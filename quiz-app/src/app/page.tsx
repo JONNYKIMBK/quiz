@@ -1,5 +1,9 @@
-import Image from "next/image";
+import QuizAPI from "../components/quizAPI/quizAPI";
 
 export default function Home() {
-  return <div className="container">hola</div>;
+  return (
+    <div>
+      <QuizAPI />
+    </div>
+  );
 }
