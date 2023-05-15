@@ -27,7 +27,7 @@ const links = [
   },
   {
     label: "Github",
-    route: "https://github.com/JONNYKIMBK/dollar-blue",
+    route: "https://github.com/JONNYKIMBK/quiz/tree/main/quiz-app",
     icon: <GitHubIcon sx={icon} />,
   },
 ];

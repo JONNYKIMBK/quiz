@@ -67,11 +67,26 @@ export default function Quiz({ questions, onRestart, loading }: QuizProps) {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900">
-      {loading ? (
-        <p className="text-white">Loading...</p>
+      {currentQuestion && currentQuestion === questions.length ? (
+        <>
+          <p className="text-white mb-4 text-xl">
+            Congratulations! Your final score is:{" "}
+            <span className="text-green-300">{score}</span>
+          </p>
+          <button
+            onClick={handleRestart}
+            className="px-4 py-2 rounded bg-gray-300 hover:bg-gray-400 focus:outline-none"
+          >
+            Play again
+          </button>
+        </>
+      ) : loading ? (
+        <div>
+          <span className="loader"></span>
+        </div>
       ) : gameOver ? (
         <>
-          <p className="text-white mb-4">
+          <p className="text-white mb-4 text-xl">
             Wrong, your final score is:{" "}
             <span className="text-green-300">{score}</span>
           </p>

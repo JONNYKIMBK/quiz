@@ -1,3 +1,4 @@
+import Head from "next/head";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -15,6 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="google" content="notranslate" />
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   );
